@@ -9,13 +9,82 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
     <![endif]--> 
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Raleway" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Page CSS -->
+    <style type="text/css">
+
+    body {
+        font-family: 'Merriweather', Georgia, serif;
+    }
+
+    .et-menu {
+        text-align: center;
+    }
+
+    .menu-image {
+    }
+
+        .menu-image img {
+            display: block;
+            margin: 100px auto 0 auto;
+            width: 100px;
+        }
+
+    .menu-items {
+        font-size: 22px;
+        margin: 50px auto 100px auto;
+        text-align: left;
+        width: 100px;
+    }
+
+    .caption {
+        font-size: 56px;
+        padding: 100px 100px 100px 100px;
+    }
+
+    #mission {
+        color: #97c2e6;
+        background-color: #176dd0;
+    }
+
+        #mission a,
+        #mission a:active,
+        #mission a:visited {
+            color: #97c2e6 !important;
+        }
+
+        #mission .highlight {
+            color: #fff !important;
+        }
+
+    </style>
 
 </head>
 <body>
 
     <div class="container-fluid">
+        <div class="row" id="mission">
+            <div class="col-sm-3 et-menu">
+                <div class="menu-image">
+                    <img src="img/logo.png">
+                </div>
+                <div class="menu-items">
+                    <a href="javascript:void(0);" class="highlight">Mission</a><br>
+                    <a href="javascript:void(0);">About</a><br>
+                    <a href="javascript:void(0);">Contact</a><br>
+                    <a href="javascript:void(0);">Donate</a><br>
+                </div>
+            </div>
+            <div class="col-sm-9 caption">
+                <p>The <span class="highlight">Electors Trust</span> provides free and strictly confidential 
+                legal support to any Elector who wishes to vote their 
+                conscience.</p>
+        </div><!--/.section-mission-->
     </div><!--/.container-fluid-->
 
     <!-- jQuery and Bootstrap JS -->
