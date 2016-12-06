@@ -211,7 +211,7 @@
                     <a href="#contact">Donate</a><br>
                 </div>
             </div>
-            <div class="col-sm-9 caption">
+            <div class="col-sm-9 caption mission-caption">
                 <p class="first">The <span class="highlight">Electors Trust</span> provides free and strictly confidential 
                 legal support to any Elector who wishes to vote their 
                 conscience.</p>
@@ -311,9 +311,11 @@ please contribute here.</p>
         function mobileResize() {
             var currentWindowWidth = $(window).width();
             if (currentWindowWidth <= 752) {
+                $('.menu-items').hide();
                 $('.caption').css('font-size', '20px');
-                $('.caption').css('padding', '30px');
-                $('.caption').css('text-align', 'center');
+                $('.mission-caption').css('font-size', '34px');
+                $('.mission-caption').css('margin-top', '40px');
+                $('.caption').css('padding', '40px');
                 $('p.quotation').css('font-size', '22px');
                 $('p.quotation').css('padding', '30px 30px 20px 30px');
                 $('p.source').css('padding-bottom', '30px');
