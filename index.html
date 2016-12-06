@@ -10,7 +10,7 @@
     <![endif]--> 
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Raleway" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -20,6 +20,11 @@
 
     body {
         font-family: 'Merriweather', Georgia, serif;
+    }
+
+    a, a:active, a:visited, a:hover {
+        color: #fff;
+        text-decoration: underline;
     }
 
     .et-menu {
@@ -43,23 +48,85 @@
     }
 
     .caption {
-        font-size: 56px;
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 160%;
         padding: 100px 100px 100px 100px;
     }
+
+        .caption p {
+            margin-top: 1em;
+        }
+
+        .caption p.first {
+            margin-top: 0 !important;
+        }
 
     #mission {
         color: #97c2e6;
         background-color: #176dd0;
     }
 
+        #mission .caption {
+            font-size: 56px;
+            font-weight: 400;
+        }
+
         #mission a,
         #mission a:active,
         #mission a:visited {
             color: #97c2e6 !important;
+            text-decoration: none;
         }
 
         #mission .highlight {
             color: #fff !important;
+        }
+
+    #about {
+        background-color: #fff;
+        color: #6e6e6e;
+    }
+
+    #contact {
+        background-color: #ca291e;
+        color: #fff;
+    }
+
+        #contact .menu-image img {
+            opacity: 0.5;
+            filter: alpha(opacity=50); /* For IE8 and earlier */
+        }
+
+    #donate {
+        background-color: #43474b;
+        color: #fff;
+    }
+
+        #donate .menu-image img {
+            opacity: 0.5;
+            filter: alpha(opacity=50); /* For IE8 and earlier */
+        }
+
+        .donate-button {
+            border: 1px solid #fff;
+            display: inline-block;
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            margin: 30px 0;
+            letter-spacing: 4px;
+            padding: 7px 60px;
+            text-decoration: none !important;
+            text-transform: uppercase;
+        }
+
+            .donate-button:hover {
+                background-color: #555 !important;
+            }
+
+        p.colophon {
+            margin-top: 100px;
+            font-size: 0.5em;
         }
 
     </style>
@@ -68,28 +135,92 @@
 <body>
 
     <div class="container-fluid">
+
         <div class="row" id="mission">
             <div class="col-sm-3 et-menu">
                 <div class="menu-image">
                     <img src="img/logo.png">
                 </div>
                 <div class="menu-items">
-                    <a href="javascript:void(0);" class="highlight">Mission</a><br>
-                    <a href="javascript:void(0);">About</a><br>
-                    <a href="javascript:void(0);">Contact</a><br>
-                    <a href="javascript:void(0);">Donate</a><br>
+                    <a href="#mission" class="highlight">Mission</a><br>
+                    <a href="#about">About</a><br>
+                    <a href="#contact">Contact</a><br>
+                    <a href="#contact">Donate</a><br>
                 </div>
             </div>
             <div class="col-sm-9 caption">
-                <p>The <span class="highlight">Electors Trust</span> provides free and strictly confidential 
+                <p class="first">The <span class="highlight">Electors Trust</span> provides free and strictly confidential 
                 legal support to any Elector who wishes to vote their 
                 conscience.</p>
-        </div><!--/.section-mission-->
+            </div>
+        </div><!--/.#mission-->
+
+        <!--
+        <div class="row" id="slider">
+            <p>slider</p>
+        </div>        -->
+        <!--/.#slider-->
+
+        <div class="row" id="about">
+            <div class="col-sm-3 et-menu">
+                <div class="menu-image">
+                    <img src="img/logo-gray.png">
+                </div>
+            </div>
+            <div class="col-sm-9 caption">
+                    <p class="first">The Electors Trust will defend your right to exercise &ldquo;independent and nonpartisan judgment.&rdquo;</p>
+                    <p>We will defend you against any fines or legal claims that might threaten the freedom of your vote.</p>
+                    <p>If you are an Elector, we will also allow you to know how many others like you there are. How many, not who. Because we will never reveal any Elector&rsquo;s views, to anyone, ever.</p>
+            </div>
+        </div><!--/.#about-->
+
+        <div class="row" id="contact">
+            <div class="col-sm-3 et-menu">
+                <div class="menu-image">
+                    <img src="img/logo.png">
+                </div>
+            </div>
+            <div class="col-sm-9 caption">
+                <p>If you&rsquo;re a conscientious Elector, and you&rsquo;d like advice or support, send an email to <a href="mailto:ElectorsTrust@durietangri.com">ElectorsTrust@durietangri.com</a>.</p>
+                <p>Or <a href="TODO">click here</a> to send an anonymous form with your preferred method of contact, and we’ll get right back to you.</p>
+
+            </div>
+        </div><!--/.#contact-->
+
+        <div class="row" id="donate">
+            <div class="col-sm-3 et-menu">
+                <div class="menu-image">
+                    <img src="img/logo.png">
+                </div>
+            </div>
+            <div class="col-sm-9 caption">
+                <p class="first">If you’re not an Elector, but would like to
+help us provide this support to Electors,
+please contribute here.</p>
+                <p>
+                    <a href="javascript:void(0);" class="donate-button">Donate</a>
+                </p>
+                <p class="colophon">The Electors Trust is a project of <a href="http://equalcitizens.us">EqualCitizens.US</a></p>
+            </div>
+        </div><!--/.#donate-->
+
     </div><!--/.container-fluid-->
 
     <!-- jQuery and Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+
+    $(document).ready(function() {
+        // Handle donate button clicks
+        $('.donate-button').click(function() {
+            $(this).blur();
+            // TODO trigger modal
+        });
+    });
+
+    </script>
 
 </body>
 </html>
