@@ -84,9 +84,8 @@
     #slider {
     }
 
-        .slide1 {
-            background-image: url('jefferson.jpg')
-        }
+        .slide1 { background-image: url('jefferson.jpg') }
+        .slide2 { background-image: url('jackson.jpg') }
         
         .slide {
             background-blend-mode: multiply;
@@ -104,7 +103,7 @@
             font-weight: 300;
             font-size: 28px;
             line-height: 200%;
-            padding: 150px 150px 20px 150px;
+            padding: 150px 200px 20px 200px;
         }
 
         p.author {
@@ -219,6 +218,7 @@
         </div><!--/.#mission-->
 
         <div class="row" id="slider">
+            <!--
             <div class="slide slide1">
                 <p class="quotation">
                     &ldquo;I have ever considered the constitutional mode of 
@@ -228,6 +228,14 @@
                 </p>
                 <p class="author">Thomas Jefferson</p>
                 <p class="source">In a Letter to George Hay (1823)</p>
+            </div>
+            -->
+            <div class="slide slide2">
+                <p class="quotation">
+&ldquo;No one faithful to our history can deny that the plan originally contemplated&nbsp;.&nbsp;.&nbsp;.&nbsp;that electors would be free agents, to exercise an independent and nonpartisan judgment as to the men best qualified for the Nation&rsquo;s highest offices.&rdquo;
+                </p>
+                <p class="author">Justice Robert Jackson</p>
+                <p class="source"><em>Ray v. Blair</em>, 343 U.S. 214, 232 (1952) (Jackson, J., dissenting)</p>
             </div>
         </div><!--/#slider-->
 
@@ -317,8 +325,8 @@ please contribute here.</p>
                 $('.mission-caption').css('margin-top', '40px');
                 $('.caption').css('padding', '40px');
                 $('p.quotation').css('font-size', '22px');
-                $('p.quotation').css('padding', '30px 30px 20px 30px');
-                $('p.source').css('padding-bottom', '30px');
+                $('p.quotation').css('padding', '30px 40px 20px 40px');
+                $('p.source').css('padding', '0 50px 30px 50px');
                 $('.menu-image-secondary').hide();
             }
         }
