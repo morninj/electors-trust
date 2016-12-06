@@ -233,7 +233,7 @@
 
         <div class="row" id="about">
             <div class="col-sm-3 et-menu">
-                <div class="menu-image">
+                <div class="menu-image menu-image-secondary">
                     <img alt="Electors Trust" src="logo-gray.png">
                 </div>
             </div>
@@ -246,7 +246,7 @@
 
         <div class="row" id="contact">
             <div class="col-sm-3 et-menu">
-                <div class="menu-image">
+                <div class="menu-image menu-image-secondary">
                     <img alt="Electors Trust" src="logo.png">
                 </div>
             </div>
@@ -259,7 +259,7 @@
 
         <div class="row" id="donate">
             <div class="col-sm-3 et-menu">
-                <div class="menu-image">
+                <div class="menu-image menu-image-secondary">
                     <img alt="Electors Trust" src="logo.png">
                 </div>
             </div>
@@ -306,6 +306,26 @@ please contribute here.</p>
             var donationAmount = parseInt($('#donation-amount').val()) * 100;
             document.write('<iframe src="https://electors-trust.appspot.com/payment-form/?amount=' + donationAmount + '" width="100%" height="100%" style="width: 100%; height: 100%; border: none;"></iframe>');
         });
+
+        // Resize elements for mobile
+        function mobileResize() {
+            var currentWindowWidth = $(window).width();
+            if (currentWindowWidth <= 752) {
+                $('.caption').css('font-size', '20px');
+                $('.caption').css('padding', '30px');
+                $('.caption').css('text-align', 'center');
+                $('p.quotation').css('font-size', '22px');
+                $('p.quotation').css('padding', '30px 30px 20px 30px');
+                $('p.source').css('padding-bottom', '30px');
+                $('.menu-image-secondary').hide();
+            }
+        }
+
+        // Call resize on page load
+        mobileResize();
+
+        // Call resize each time screen is resized
+        $(window).resize(function() { mobileResize(); });
     });
 
     </script>
