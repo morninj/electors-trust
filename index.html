@@ -35,13 +35,28 @@
         text-align: center;
     }
 
+    .modal-contents {
+        color: #555;
+        font-size: 2em;
+        font-weight: 300;
+        text-align: center;
+    }
+
+        .modal-contents p {
+            padding: 20px;
+        }
+
+        .modal-contents button {
+            padding: 20px;
+        }
+
     .menu-image {
     }
 
         .menu-image img {
             display: block;
             margin: 100px auto 0 auto;
-            width: 100px;
+            width: 101px;
         }
 
     .menu-items {
@@ -213,7 +228,7 @@ please contribute here.</p>
     <!-- JS libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/noelboss/featherlight/1.6.1/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
+    <script src="https://checkout.stripe.com/checkout.js"></script>
 
     <script>
 
@@ -221,8 +236,24 @@ please contribute here.</p>
         // Handle donate button clicks
         $('.donate-button').click(function() {
             $(this).blur();
-            // TODO trigger modal
-            $.featherlight('<p>TODO</p>');
+            // Construct modal contents
+            var output = '<div class="modal-contents">';
+            output += '<form>';
+            output += '<p>How much would you like to donate?</p>';
+            output += '<p>$<input type="number" step="1" min="1" max="1000000" id="donation-amount" value="50"></p>';
+            output += '<p><button class="btn-success" id="submit-donation">Make donation</button></p>';
+            output += '</form>';
+            output += '</div>';
+            output += '';
+            // Trigger modal
+            $.featherlight(output);
+        });
+
+        // Process donation
+        $(document).on('click', '#submit-donation', function(e) {
+            e.preventDefault();
+            var donationAmount = parseInt($('#donation-amount').val()) * 100;
+            document.write('<iframe src="https://electors-trust.appspot.com/payment-form/?amount=' + donationAmount + '" width="100%" height="100%" style="width: 100%; height: 100%;"></iframe>');
         });
     });
 
